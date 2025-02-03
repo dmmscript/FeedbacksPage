@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+  font-family:'poppins';
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  padding: 10px;
+  background: linear-gradient(#0A74DA, #6A0DAD);
+  border-radius: 10px;
+}
+
+.header {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.description {
+  font-family: 'poppins';
+  color: #FFFFFF;
+}
+
+.name, .stars, .comment {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  width: 100%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.name input,
+.stars select,
+.comment textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #6A0DAD;
+}
+
+.name input:-webkit-autofill {
+  -webkit-text-fill-color: #6A0DAD;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.comment textarea {
+  height: 100px;
+  resize: none;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button button {
+  color: #FFFFFF;
+  cursor: pointer;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  background: #6A0DAD;
+  font-family: 'Orbitron';
+  transition: background 0.3s ease;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.button button:hover,
+.button button:focus {
+  background: #0A74DA;
+  outline: none;
+}
+
+.spinner {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-top: 3px solid #6A0DAD;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: 'poppins', sans-serif;
+  color: #FFFFFF;
+}
