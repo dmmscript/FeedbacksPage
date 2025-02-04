@@ -14,10 +14,7 @@ form_data.addEventListener('submit', function (e) {
         return;
     }
 
-    const formData = new FormData();
-    formData.append('nome', nome);
-    formData.append('avaliacao', avaliacao);
-    formData.append('comentario', comentario);
+    const payload  = { nome, avaliacao, comentario };
 
     submitButton.disabled = true;
     loadingSpinner.style.display = "inline-block";
@@ -25,7 +22,7 @@ form_data.addEventListener('submit', function (e) {
     fetch("/api/sendFeedback", {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: formData
+        body: JSON.stringify(payload)
     })
     .then(response => response.json())
     .then(data => {
