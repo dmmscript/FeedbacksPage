@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="" method="post" name="clientleads-page">
+        <form action="" method="post" name="feedbacks-page">
             <div class="header">
                 <h1>Feedback dos Clientes</h1>
             </div>
@@ -17,10 +17,10 @@
             </div>
             <h2>Nome</h2>
             <div class="name">
-                <input type="Nome" name="name" placeholder="..."></div>
+                <input type="text" name="name" placeholder="..." required></div>
                 <h2>Avaliação</h2>
             <div class="stars">
-                <select name="stars">
+                <select name="rating" required>
                     <option value="5">★★★★★</option>
                     <option value="4">★★★★</option>
                     <option value="3">★★★</option>
@@ -30,7 +30,7 @@
             </div>
             <h2>Comentário</h2>
             <div class="comment">
-                <textarea type="text" name="comment" placeholder="..."></textarea></div>
+                <textarea type="text" name="comment" placeholder="..." required></textarea></div>
             <div class="button">
                 <button type="submit" id="submit-button">Enviar</button>
                 <span id="loading-spinner" class="spinner"></span>
