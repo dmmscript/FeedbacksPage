@@ -5,9 +5,9 @@ const loadingSpinner = document.getElementById("loading-spinner");
 form_data.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const nome = form_data["name"].value.trim();
-    const avaliacao = form_data["rating"].value.trim();
-    const comentario = form_data["comment"].value.trim();
+    const nome = form_data["nome"].value.trim();
+    const avaliacao = form_data["avaliacao"].value.trim();
+    const comentario = form_data["comentario"].value.trim();
 
     if (nome === '' || comentario === '') {
         alert('Por favor, preencha todos os campos!');
@@ -21,8 +21,8 @@ form_data.addEventListener('submit', function (e) {
 
     fetch("/api/sendFeedback", {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(payload)
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData.toString()
     })
     .then(response => response.json())
     .then(data => {

@@ -31,7 +31,7 @@ body {
   color: #FFFFFF;
 }
 
-.name, .stars, .comment {
+.name, .rating, .comment {
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #FFFFFF;
@@ -43,7 +43,7 @@ body {
 }
 
 .name input,
-.stars select,
+.rating select,
 .comment textarea {
   width: 100%;
   border: none;

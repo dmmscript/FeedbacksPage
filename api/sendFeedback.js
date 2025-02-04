@@ -7,6 +7,7 @@ export default async function handler(req, res) {
 
     try {
         const { nome, avaliacao, comentario } = req.body;
+        
         const formData = new URLSearchParams();
         formData.append("nome", nome);
         formData.append("avaliacao", avaliacao);
@@ -14,12 +15,13 @@ export default async function handler(req, res) {
 
         const response = await fetch(GOOGLE_SCRIPT_URL, {
             method: "POST",
-            headers: { "Content-Type": "application/x-ww-form-urlencoded" },
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: formData.toString()
         });
 
         const data = await response.text();
-        res.status(response.status).send(data);
+        res.status(response.status).json({ message: data });
+        
     } catch (error) {
         res.status(500).json({ error: "Erro ao enviar feedback" });
     }
