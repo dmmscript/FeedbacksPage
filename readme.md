@@ -1,6 +1,6 @@
 <h1 align="center" style="font-weight: bold;">Feedbacks Page</h1>
 <p align="center">
-<b>Feedbacks Page</b> is a project focused on collecting and submitting feedback data through a responsive web form, utilizing HTML, CSS, JavaScript, Google Apps Script for backend processing, and Node.js for backend deployment.
+<b>Feedbacks Page</b> is a project focused on collecting and submitting feedback data through a responsive web form, utilizing HTML, CSS, JavaScript, with Google Apps Script as the backend and Fetch API for processing requests.
 </p>
 
 <h2 style="font-weight: bold;">📍 Features</h2>
@@ -15,8 +15,7 @@
 - HTML
 - CSS
 - JavaScript
-- Google Apps Script (Backend)
-- Node.js (Backend Deployment)
+- Google Apps Script
 - Fetch API
 
 <h2 style="font-weight: bold;">💡 How to Use</h2>
