@@ -21,8 +21,8 @@ form_data.addEventListener('submit', function (e) {
 
     fetch("/api/sendFeedback", {
         method: 'POST',
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formData.toString()
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
     })
     .then(response => response.json())
     .then(data => {

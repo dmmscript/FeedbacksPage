@@ -8,18 +8,19 @@ export default async function handler(req, res) {
     try {
         const { nome, avaliacao, comentario } = req.body;
         
-        const formData = new URLSearchParams();
-        formData.append("nome", nome);
-        formData.append("avaliacao", avaliacao);
-        formData.append("comentario", comentario);
+        const payload = {
+            nome,
+            avaliacao,
+            comentario
+        };
 
         const response = await fetch(GOOGLE_SCRIPT_URL, {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: formData.toString()
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
         });
 
-        const data = await response.text();
+        const data = await response.json();
         res.status(response.status).json({ message: data });
         
     } catch (error) {
