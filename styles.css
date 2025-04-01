@@ -63,6 +63,36 @@ body {
   resize: none;
 }
 
+.feedbacks-container {
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+#feedbacks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feedback-card {
+  background: #FFFFFF;
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 5px solid #6A0DAD;
+}
+
+.feedback-card h3 {
+  margin: 0;
+  color: #6A0DAD;
+}
+
+.feedback-card p {
+  margin: 5px 0;
+  color: #333;
+}
+
 .button {
   display: inline-flex;
   justify-content: center;

@@ -38,3 +38,23 @@ form_data.addEventListener('submit', function (e) {
         loadingSpinner.style.display = "none";
     });
 });
+
+async function fetchFeedbacks() {
+    try {
+        const response = await fetch("/api/sendFeedback");
+        const data = await response.json();
+
+        const feedbackList = document.getElementById("feedbackList");
+        feedbackList.innerHTML = "";
+        
+        data.feedbacks.forEach(feedback => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `<strong>${feedback.nome}:</strong> ${feedback.comentario} <em>(Nota: ${feedback.avaliacao})</em>`;
+            feedbackList.appendChild(listItem);
+        });
+    } catch (error) {
+        console.error("Erro ao buscar feedbacks:", error);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", fetchFeedbacks);
