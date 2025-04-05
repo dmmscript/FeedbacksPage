@@ -57,12 +57,12 @@ async function fetchFeedbacks() {
                 hour: '2-digit', minute: '2-digit'
             });
 
-            const stars = "★".repeat(feedback.avaliacao) + "☆".repeat(5 - feedback.avaliacao);
+            const stars = `<span class="stars">${"★".repeat(feedback.avaliacao)}${"☆".repeat(5 - feedback.avaliacao)}</span>`;
 
             card.innerHTML = `
                 <h3>${feedback.nome}</h3>
+                <p><strong style="color: #0A74DA;">Avaliação:</strong> ${stars}</p>
                 <p>${feedback.comentario}</p>
-                <p><strong>Avaliação:</strong> ${stars}</p>
                 <small>${formattedDate}</small>
             `;
 
@@ -74,3 +74,7 @@ async function fetchFeedbacks() {
         console.error('Erro:', error);
     }
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    fetchFeedbacks();
+  });
