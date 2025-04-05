@@ -75,6 +75,6 @@ async function fetchFeedbacks() {
     }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     fetchFeedbacks();
-  });
+  };
