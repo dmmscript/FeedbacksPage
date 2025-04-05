@@ -93,6 +93,11 @@ body {
   color: #333;
 }
 
+.feedback-card .stars {
+  color: #FFD700;
+  font-size: 18px;
+}
+
 .button {
   display: inline-flex;
   justify-content: center;

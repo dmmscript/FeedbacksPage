@@ -28,6 +28,7 @@ form_data.addEventListener('submit', function (e) {
     .then(data => {
         alert('Feedback enviado com sucesso!');
         form_data.reset();
+        fetchFeedbacks();
     })
     .catch(error => {
         alert('Erro ao enviar feedback, tente novamente.', error);
@@ -44,17 +45,32 @@ async function fetchFeedbacks() {
         const response = await fetch("/api/sendFeedback");
         const data = await response.json();
 
-        const feedbackList = document.getElementById("feedbackList");
+        const feedbackList = document.getElementById("feedbacks-list");
         feedbackList.innerHTML = "";
         
         data.feedbacks.forEach(feedback => {
-            const listItem = document.createElement("li");
-            listItem.innerHTML = `<strong>${feedback.nome}:</strong> ${feedback.comentario} <em>(Nota: ${feedback.avaliacao})</em>`;
-            feedbackList.appendChild(listItem);
+            const card = document.createElement("div");
+            card.classList.add("feedback-card");
+
+            const formattedDate = new Date(feedback.data).toLocaleString('pt-BR', {
+                day: '2-digit', month: '2-digit', year: 'numeric',
+                hour: '2-digit', minute: '2-digit'
+            });
+
+            const stars = "★".repeat(feedback.avaliacao) + "☆".repeat(5 - feedback.avaliacao);
+
+            card.innerHTML = `
+                <h3>${feedback.nome}</h3>
+                <p>${feedback.comentario}</p>
+                <p><strong>Avaliação:</strong> ${stars}</p>
+                <small>${formattedDate}</small>
+            `;
+
+            feedbackList.appendChild(card);
         });
+        
     } catch (error) {
-        console.error("Erro ao buscar feedbacks:", error);
+        alert('Erro ao buscar feedbacks, tente novamente.');
+        console.error('Erro:', error);
     }
 }
-
-document.addEventListener("DOMContentLoaded", fetchFeedbacks);
