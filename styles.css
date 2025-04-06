@@ -30,18 +30,20 @@ body {
 
 h1 {
   color: #FFFFFF;
-  font-size: 36px;
+  font-size: 3vw;
   font-family: 'Orbitron', sans-serif;
 }
 
 h2 {
-  font-family: 'Orbitron', sans-serif;
   color: #FFFFFF;
+  font-size: 2vw;
+  font-family: 'Orbitron', sans-serif;
 }
 
 h3 {
-  font-family: 'poppins', sans-serif;
   color: #6A0DAD;
+  font-size: 1.5vw;
+  font-family: 'poppins', sans-serif;
 }
 
 .name, .rating, .comment {
@@ -163,5 +165,33 @@ h3 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-size: 3.5vw;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 5.5vw;
+  }
+
+  h2 {
+    font-size: 4.5vw;
+  }
+
+  h3 {
+    font-size: 3vw;
   }
 }
