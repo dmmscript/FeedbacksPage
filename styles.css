@@ -93,10 +93,7 @@ body {
   color: #333;
 }
 
-.feedback-card .stars {
-  color: #0A74DA;
-  font-size: 18px;
-}
+
 
 .button {
   display: inline-flex;
@@ -146,5 +143,5 @@ h1, h2 {
 
 h3 {
   font-family: 'poppins', sans-serif;
-  color: #FFFFFF;
+  color: #6A0DAD;
 }
