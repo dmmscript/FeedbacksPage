@@ -226,6 +226,10 @@ p {
     font-size: 2.5vw;
   }
 
+  strong {
+    font-size: 3vw;
+  }
+
   small {
     font-size: 2vw;
   }
@@ -251,6 +255,10 @@ p {
 
   p {
     font-size: 2vw;
+  }
+
+  strong {
+    font-size: 2.5vw;
   }
 
   small {
