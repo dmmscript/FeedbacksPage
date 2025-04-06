@@ -57,7 +57,7 @@ async function fetchFeedbacks() {
                 hour: '2-digit', minute: '2-digit'
             });
 
-            const stars = `<span class="stars">${"★".repeat(feedback.avaliacao)}${"☆".repeat(5 - feedback.avaliacao)}</span>`;
+            const stars = `<span class="stars" style="color: #0A74DA;">${"★".repeat(feedback.avaliacao)}${"☆".repeat(5 - feedback.avaliacao)}</span>`;
 
             card.innerHTML = `
                 <h3>${feedback.nome}</h3>
