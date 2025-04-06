@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap"
-    rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feedback dos Clientes</title>
 
-  <link rel="icon" href="/assets/photo-ti.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="/assets/my-photo.jpg" type="image/jpeg" />
 
   <meta property="og:title" content="Feedbacks dos Clientes | Dani Moro TI" />
   <meta property="og:description" content="Veja os feedbacks dos clientes da Dani. Deixe também o seu! 👩🏻‍💻💙" />
@@ -18,44 +19,64 @@
   <meta property="og:type" content="website" />
 </head>
 <body>
-    <div class="container">
-        <form action="" method="post" name="feedbacks-page">
-            <div class="container-photo">
-                <img src="/assets/photo-ti.jpg" alt="Quem é a Dani Moro" class="my-photo" />
-            </div>
-            <div class="header">
-                <h1>Feedbacks dos Clientes</h1>
-            </div>
-            <div class="description">
-                <h3>Deixe sua avaliação sobre meus serviços!</h3>
-            </div>
-            <h2>Nome</h2>
-            <div class="name">
-                <input type="text" name="nome" placeholder="..." required></div>
-                <h2>Avaliação</h2>
-            <div class="rating">
-                <select name="avaliacao" required>
-                    <option value="5">★★★★★</option>
-                    <option value="4">★★★★</option>
-                    <option value="3">★★★</option>
-                    <option value="2">★★</option>
-                    <option value="1">★</option>
-                </select>
-            </div>
-            <h2>Comentário</h2>
-            <div class="comment">
-                <textarea type="text" name="comentario" placeholder="..." required></textarea></div>
-            <div class="button">
-                <button type="submit" id="submit-button">Enviar</button>
-                <span id="loading-spinner" class="spinner"></span>
-            </div>
-        </form>
+  <div class="container">
+    <form action="" method="post" name="feedbacks-page">
+      <div class="container-photo">
+        <img src="/assets/my-photo.png" alt="Quem é a Dani Moro" class="my-photo" />
+      </div>
 
-        <div class="feedbacks-container">
-            <h2>Feedbacks Publicados</h2>
-            <div id="feedbacks-list"></div>
-        </div>
+      <div class="header">
+        <h1>Feedbacks dos Clientes</h1>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="description">
+        <h3>Deixe sua avaliação sobre meus serviços!</h3>
+      </div>
+
+      <h2>Nome</h2>
+      <div class="name">
+        <input type="text" name="nome" placeholder="..." required />
+      </div>
+
+      <h2>Avaliação</h2>
+      <div class="rating">
+        <select name="avaliacao" required>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★</option>
+          <option value="3">★★★</option>
+          <option value="2">★★</option>
+          <option value="1">★</option>
+        </select>
+      </div>
+
+      <h2>Comentário</h2>
+      <div class="comment">
+        <textarea name="comentario" placeholder="..." required></textarea>
+      </div>
+
+      <div class="button">
+        <button type="submit" id="submit-button">Enviar</button>
+        <span id="loading-spinner" class="spinner"></span>
+      </div>
+    </form>
+
+    <div class="feedbacks-container">
+      <h2>Feedbacks Publicados</h2>
+      <div id="feedbacks-list"></div>
+    </div>
+  </div>
+
+  <a
+    href="https://wa.me/5516988064132"
+    class="whatsapp-float"
+    target="_blank"
+  >
+    <img
+      src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/whatsapp.svg"
+      alt="WhatsApp"
+    />
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
