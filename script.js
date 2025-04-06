@@ -60,7 +60,7 @@ async function fetchFeedbacks() {
             const stars = `<span class="stars" style="color: #0A74DA;">${"★".repeat(feedback.avaliacao)}${"☆".repeat(5 - feedback.avaliacao)}</span>`;
 
             card.innerHTML = `
-                <h3>${feedback.nome}</h3>
+                <h4>${feedback.nome}</h4>
                 <p><strong style="color: #0A74DA;">Avaliação:</strong> ${stars}</p>
                 <p>${feedback.comentario}</p>
                 <small>${formattedDate}</small>
