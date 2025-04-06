@@ -57,6 +57,14 @@ p {
   color: #FFFFFF;
 }
 
+strong {
+  font-size: 1.25vw;
+}
+
+small {
+  font-size: 0.5vw;
+}
+
 .name, .rating, .comment {
   padding: 10px;
   margin-bottom: 10px;
